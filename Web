@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet the Team</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header class="main-header">
+    <h1>Meet the Team</h1>
+    <p>The minds behind the mission</p>
+  </header>
+
+  <section class="team-grid">
+    <!-- Team Member Card -->
+    <div class="team-card">
+      <img src="images/profile1.jpg" alt="Member Photo" class="profile-pic" />
+      <h2>Maryam Khan</h2>
+      <p class="role">Front-End Developer</p>
+      <p class="bio">"Code is poetry. Let's write something beautiful."</p>
+      <div class="socials">
+        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- Duplicate and update the cards below as needed (4–8 total) -->
+    <div class="team-card">
+      <img src="images/profile2.jpg" alt="Member Photo" class="profile-pic" />
+      <h2>Ali Raza</h2>
+      <p class="role">UI Designer</p>
+      <p class="bio">"Design isn't just what it looks like, but how it works."</p>
+      <div class="socials">
+        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- Add more team members here -->
+  </section>
+
+  <button id="scrollTopBtn" title="Go to top">↑</button>
+
+</body>
+</html>
+
+
+---
+
+✅ style.css
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.main-header {
+  text-align: center;
+  padding: 3rem 1rem 1.5rem;
+}
+
+.main-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+.main-header p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+}
+
+.team-grid {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.team-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.team-card h2 {
+  font-size: 1.3rem;
+  color: #34495e;
+}
+
+.role {
+  font-weight: 600;
+  color: #2980b9;
+  margin: 0.5rem 0;
+}
+
+.bio {
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  margin-bottom: 1rem;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon {
+  font-size: 1.2rem;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #2980b9;
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+  background: #2980b9;
+  color: #fff;
+  border: none;
+  padding: 12px 15px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background 0.3s;
+}
+
+#scrollTopBtn:hover {
+  background: #1f6391;
+}
+
+
+---
+
+✅ script.js
+
+// Show scroll-to-top button
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.onscroll = function () {
+  scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+};
+
+scrollBtn.onclick = function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+
+---
+
+✅ Placeholder Images
+
+Use any of these for profile pictures:
+https://i.pravatar.cc/150?img=1
+or you can download random profile pics and name them like profile1.jpg, profile2.jpg, etc.
+
+
